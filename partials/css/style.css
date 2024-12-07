@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main: rgb(5, 159, 170);
+}
+
+*{box-sizing: border-box;}
+
+body{
+    font-family: "poppins", sans-serif;
+
+    &.bg{
+        height: 100vh;
+        background-image: url("../img/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.panel{
+    width: clamp(250px, 50vw, 650px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    padding: 4rem 0;
+    
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+
+    label{
+        display: block;
+        margin: 0.4em 0;
+    }
+
+    & > div{
+        padding: 1em;
+
+
+        input{
+            width: clamp(150px, 40vw, 300px);
+            color: var(--main);
+            padding: 0.5rem;  
+            outline: none; 
+        }  
+    }
+
+    .btn{
+        color: #fff;
+        padding: 0.8rem 0.4rem;
+        text-decoration: none;
+        text-align: center;
+        background-color: var(--main);
+        width: clamp(150px, 40vw, 300px);
+        border-radius: 0.4rem;
+    }
+}
+
